@@ -36,7 +36,7 @@ The trained system is deployed as an interactive platform where users can upload
 # Installation
 To install it, download all the files in a ZIP format, check the image location according to your device, and then click on the app.py file to run it,your site will be up and running.
 
-# NOTE:
+## NOTE:
 The trained model and dataset has not been uploaded due to GitHub's file size restriction, which limits uploads to files smaller than 25MB.(ONLY FOR FACE SWAP DEEPFAKE DETECTION) 
 
 
