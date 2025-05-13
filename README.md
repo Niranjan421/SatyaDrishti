@@ -2,6 +2,8 @@
 
 # SATYADRISHTI
 
+[NOTE: The trained model and dataset has not been uploaded due to GitHub's file size restriction, which limits uploads to files smaller than 25MB.(ONLY FOR FACE SWAP DEEPFAKE DETECTION)] 
+
 ## Explanatory Video for SatyaDrishti
 https://github.com/user-attachments/assets/285b7190-0cd2-41c7-86f0-3acd8b8515f8
 
