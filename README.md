@@ -2,8 +2,6 @@
 
 # SATYADRISHTI
 
-[NOTE: The trained model and dataset has not been uploaded due to GitHub's file size restriction, which limits uploads to files smaller than 25MB.(ONLY FOR FACE SWAP DEEPFAKE DETECTION)] 
-
 ## Explanatory Video for SatyaDrishti
 https://github.com/user-attachments/assets/285b7190-0cd2-41c7-86f0-3acd8b8515f8
 
@@ -37,6 +35,9 @@ The trained system is deployed as an interactive platform where users can upload
 
 # Installation
 To install it, download all the files in a ZIP format, check the image location according to your device, and then click on the app.py file to run it,your site will be up and running.
+
+# NOTE:
+The trained model and dataset has not been uploaded due to GitHub's file size restriction, which limits uploads to files smaller than 25MB.(ONLY FOR FACE SWAP DEEPFAKE DETECTION) 
 
 
 <p align="center">(<a href="#readme-top">back to top</a>)</p>
