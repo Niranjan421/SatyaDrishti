@@ -3,7 +3,7 @@
 # SATYADRISHTI
 
 ## Explanatory Video for SatyaDrishti
-https://github.com/user-attachments/assets/235bd088-31a7-4f3f-be5f-d80faf7b8561
+https://github.com/user-attachments/assets/285b7190-0cd2-41c7-86f0-3acd8b8515f8
 
 
 
