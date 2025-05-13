@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SatyaDrishti - Detection</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #000000, #434343);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: transparent;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        header ul li a:hover {
+            color: #00ccff;
+        }
+
+        header ul li a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(to right, #d400d4, #00ccff);
+            transition: width 0.3s ease;
+        }
+
+        header ul li a:hover::after {
+            width: 100%;
+        }
+
+        .gradient-title {
+            background: linear-gradient(to right, #d400d4, #00ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 70px;
+            font-weight: bold;
+            position: relative;
+            margin-top: -150px;
+        }
+       header ul li a.premium:hover {
+    color: #dbb658;
+}
+
+header ul li a.premium:hover::after {
+    background: #dbb658;
+}
+
+        .gradient-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #d400d4, #00ccff);
+            opacity: 0.5;
+            transform: scaleY(-1);
+            filter: blur(2px);
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .detection-options-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            max-width: 500px;
+            margin: 100px auto 0 auto;
+            backdrop-filter: blur(5px);
+        }
+
+        .detection-options {
+            text-align: center;
+        }
+
+        .detection-options p {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .detection-options a {
+            padding: 15px 30px;
+            background: linear-gradient(to right, #00ccff, #d400d4);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+        }
+
+        .detection-options a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(212, 0, 212, 0.4);
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html">Logout</a></li>
+                
+                <li><a href="contact.html">Contact</a></li>
+                <li><em><a href="premium.html" class="premium">Premium 👑</a></em></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="detection-options-box">
+            <div class="detection-options">
+                <p>Choose detection type:</p>
+                <a href="/audio_detection">Audio Detection</a>
+                <a href="/video_detection">Video Detection</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Error404. All rights reserved.
+    </footer>
+
+    <script>
+        // Prevent back navigation to login
+        history.pushState(null, document.title, location.href);
+        window.addEventListener('popstate', function () {
+            window.location.href = "/model.html";
+        });
+    </script>
+</body>
+</html>

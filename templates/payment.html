@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SatyaDrishti - Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #00ccff, #d400d4);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 36px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 18px;
+            background-color: #333; /* Set background to match the navbar color */
+            border: 2px solid #333; /* Box-like appearance */
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: #f39c12; /* Gold color on hover */
+            color: black;
+        }
+
+        .navbar a.active {
+            background-color: #f39c12;
+            color: black;
+        }
+
+        .content {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .payment-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .payment-container h2 {
+            text-align: center;
+            color: #FF8C00; /* Gold text color */
+            font-weight: bold;
+            padding: 12px 20px;
+            text-shadow: 
+                1px 1px 0px black, 
+                -1px -1px 0px black,  
+                1px -1px 0px black,  
+                -1px 1px 0px black; /* Black outline around the text */
+            margin: 0 auto;
+            margin-bottom: 1em;
+        }
+
+        .payment-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .payment-form input, .payment-form select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .payment-form button {
+            background: linear-gradient(90deg, #FFD700, #FF8C00); /* Gold to orange */
+            color: black;
+            font-weight: bold;
+            border: 2px solid black;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .payment-form button:hover {
+            background: linear-gradient(90deg, #dbb658); /* Light to lime green */
+            color: black;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 4px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        /* Style for the dynamic dropdown text */
+        .selected-option {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333; /* Light black */
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Modify the select dropdown */
+        select {
+            color: #333; /* Light black */
+        }
+
+        option {
+            color: #333; /* Light black for the option text */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html" >Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="premium.html">Premium</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="payment-container">
+            <h2>Complete Your Payment</h2>
+
+            <form class="payment-form">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required placeholder="Enter your full name">
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+                <label for="amount">Amount to Pay</label>
+                <select id="amount" name="amount" required onchange="updateSelectedOption()">
+                    <option value="50">₹499</option>
+                    <option value="100">₹999</option>
+                </select>
+
+                <label for="payment-method">Payment Method</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="debit-card">Debit Card</option>
+                    <option value="net-banking">Net Banking</option>
+                </select>
+
+                <button type="submit">Pay Now</button>
+            </form>
+
+            <!-- Dynamic text for selected option -->
+            <div id="selected-option" class="selected-option">You selected PRO</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Error404. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function updateSelectedOption() {
+            const amountSelect = document.getElementById('amount');
+            const selectedOption = document.getElementById('selected-option');
+
+            if (amountSelect.value == "50") {
+                selectedOption.textContent = "You selected PRO";
+            } else if (amountSelect.value == "100") {
+                selectedOption.textContent = "You selected UPGRADE PRO";
+            }
+        }
+
+        // Initialize with the default value
+        updateSelectedOption();
+    </script>
+
+</body>
+</html>

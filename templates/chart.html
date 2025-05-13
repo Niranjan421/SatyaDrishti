@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>SatyaDrishti - Accuracy</title>
+
+  <style>
+    body {
+      background: linear-gradient(to right, #000000, #130F40);
+      color: white;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 22px;
+      transition: color 0.3s ease, text-decoration 0.3s ease;
+      position: relative;
+    }
+
+    .navbar a:hover {
+      color: #00ccff;
+      background: linear-gradient(90deg, #00ccff, #d400d4);
+      -webkit-background-clip: text;
+      background-clip: text;
+      border-bottom: 2px solid transparent;
+    }
+
+    .navbar a:before {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #00ccff, #d400d4);
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .navbar a:hover:before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
+
+    /* Comparison Section */
+    .comparison-section {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .comparison-column {
+      flex: 0 0 100%;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      text-align: center;
+    }
+
+    .comparison-column img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 10px auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 30px 0 15px;
+      font-size: 28px;
+      background: linear-gradient(90deg, #00ccff, #d400d4);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    h3 {
+      background: linear-gradient(to right, #8A2387, #E94057, #f27121);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    /* Underline effect for headings */
+    .section-title h2::after,
+    h3::after {
+      content: '';
+      display: block;
+      width: 50%;
+      height: 3px;
+      margin: 10px auto 0;
+      background: linear-gradient(to right, #00ccff, #d400d4);
+      border-radius: 2px;
+    }
+
+    footer {
+      background-color: #000000;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header/Navbar ======= -->
+  <header id="header" class="fixed-top">
+    <div class="navbar">
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="javascript:history.back()">Back</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ======= Comparison Section ======= -->
+  <section class="work-process" style="padding: 0px 0 60px;">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Model Evaluation - Audio vs. Video</h2>
+      </div>
+
+      <div class="comparison-section">
+        <!-- Video Column -->
+        <div class="comparison-column">
+          <h3>Video</h3>
+          <h5>Accuracy Plot</h5>
+          <img src="static/img/plot1.png" alt="Video Accuracy Plot">
+          <h5>Precision Recall</h5>
+          <img src="./static/img/plot5.png" alt="Video Precision Recall">
+          <h5>Confusion Matrix</h5>
+          <img src="static/img/plot4.png" alt="Video Confusion Matrix">
+        </div>
+
+        <!-- Audio Column -->
+        <div class="comparison-column">
+          <h3>Audio</h3>
+          <h5>Accuracy Plot</h5>
+          <img src="../static/img/plot1.png" alt="Accuracy Plot">
+          <h5>Precision Recall</h5>
+          <img src="../static/img/plot5.png" alt="Precision Recall">
+          <h5>Confusion Matrix</h5>
+          <img src="../static/img/plot4.png" alt="Confusion Matrix">
+        </div>
+      </div>
+
+      <!-- Architecture Section -->
+      <div class="section-title">
+        <h2>Overall Architecture of the Project</h2>
+      </div>
+
+      <div class="comparison-section">
+        <!-- Video Architecture Section -->
+        <div class="comparison-column">
+          <h3>Video Architecture</h3>
+          <div class="text-center">
+            <img src="static/img/video archi.jpeg" alt="Video Architecture Diagram" style="max-width: 80%; height: auto; margin: 0 auto;">
+          </div>
+        </div>
+
+        <!-- Audio Architecture Section -->
+        <div class="comparison-column">
+          <h3>Audio Architecture</h3>
+          <div class="text-center">
+            <img src="static/img/archi.png" alt="Audio Architecture Diagram" style="max-width: 80%; height: auto; margin: 0 auto;">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container text-center">
+      <div class="copyright">&copy; 2025 Error404. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

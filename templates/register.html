@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SatyaDrishti - Register</title>
+    <style>
+        body {
+            {% if background_image %}
+                background-image: url("{{ background_image }}");
+            {% else %}
+                background-color: #f1f1f1;
+            {% endif %}
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: transparent;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        header ul li a:hover {
+            color: #00ccff;
+        }
+
+        header ul li a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(to right, #d400d4, #00ccff);
+            transition: width 0.3s ease;
+        }
+
+        header ul li a:hover::after {
+            width: 100%;
+        }
+
+        .gradient-title {
+            background: linear-gradient(to right, #d400d4, #00ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 70px;
+            font-weight: bold;
+            position: relative;
+            margin-top: -150px;
+        }
+
+        .gradient-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #d400d4, #00ccff);
+            opacity: 0.5;
+            transform: scaleY(-1);
+            filter: blur(2px);
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .register-container {
+            background-color: rgba(255, 255, 255, 0);
+            color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+            width: 40%;
+        }
+             header ul li a.premium:hover {
+    color: #dbb658;
+}
+
+header ul li a.premium:hover::after {
+    background: #dbb658;
+}
+
+
+        .register-container h2 {
+            text-align: center;
+        }
+
+        .register-form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(to right, #d400d4, #00ccff);
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .error-message {
+        color: red;
+        text-align: center;
+        margin-bottom: 10px;
+        }
+
+        .success-message {
+            color: green;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+            header ul li a.active {
+    color: #00ccff;
+}
+
+header ul li a.active::after {
+    width: 100%;
+    background: linear-gradient(to right, #d400d4, #00ccff);
+}
+
+        .login-now a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .login-now {
+            text-align: center;
+        }
+
+        footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .ansh {
+    background: linear-gradient(to right,#8a2387, #e94057, #f27121); /* blue to pink */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3em; /* adjust size as needed */
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+    </style>
+
+
+</head>
+<body>
+    <header>
+        
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html" class="active">Register</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><em><a href="premium.html" class="premium">Premium 👑</a></em></li>
+
+        </ul>
+    </header>
+
+    <main>
+    <div class="register-container">
+        <h2 class="ansh">Register</h2>
+        <form class="register-form" action="/register.html" method="POST">
+
+            {% if msg %}
+                {% if msg == "You have successfully registered" %}
+                    <div class="success-message">
+                {% else %}
+                    <div class="error-message">
+                {% endif %}
+                    {{ msg }}
+                </div>
+            {% endif %}
+
+
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+
+            <div class="login-now">
+                    <span>Already an user? </span>
+                    <a href="login.html">Login</a>
+            </div>
+        </form>
+    </div>
+    </main>
+
+
+    <footer>
+        &copy; 2025 Error404. All rights reserved.
+    </footer>
+</body>
+</html>

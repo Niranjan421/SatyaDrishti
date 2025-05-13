@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Premium Plans</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #FFD700;
+      text-align: center;
+    }
+
+    .gold-gradient {
+      background: linear-gradient(90deg, #dbb658);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hold {
+      background: linear-gradient(to right, #d400d4, #00ccff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hold2 {
+      background: white;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    header {
+      background-color: transparent;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    header ul li a {
+      color: #dbb658;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    header ul li a:hover {
+      color: #00ccff;
+    }
+
+    header ul li a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background: linear-gradient(to right, #d400d4, #00ccff);
+      transition: width 0.3s ease;
+    }
+
+    header ul li a:hover::after {
+      width: 100%;
+    }
+
+    header ul li a.active {
+      color: #00ccff;
+    }
+
+    header ul li a.active::after {
+      width: 100%;
+      background: linear-gradient(to right, #d400d4, #00ccff);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 20px 0 10px;
+    }
+
+    .plans {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 72px 20px;
+    }
+
+    .plan {
+      background-color: #1a1a1a;
+      border: 2px solid #dbb658;
+      border-radius: 10px;
+      padding: 30px 20px;
+      width: 300px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .plan:hover {
+      transform: translateY(-5px);
+    }
+
+    .plan h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 2rem;
+      margin: 15px 0;
+      font-weight: bold;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .features li {
+      margin: 10px 0;
+      color: #dbb658;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: linear-gradient(90deg, #FFD700, #FF8C00);
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 15px;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #7fcb3c;
+      color: black;
+      opacity: 0.9;
+    }
+
+    footer {
+      padding: 20px;
+      font-size: 0.9rem;
+      background-color: #111;
+      margin-top: 30px;
+      color: #FFD700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="premium.html" class="active">Premium 👑</a></li>
+    </ul>
+  </header>
+
+  <!-- Page Title -->
+  <h1 class="hold">Choose Your Premium Plan</h1>
+  <hr style="width: 40%; margin: 10px auto; border: none; height: 2px; background: linear-gradient(to right, #8A2387, #E94057, #f27121);" />
+  <p class="hold2">Unlock exclusive features and priority support</p>
+
+  <!-- Pricing Cards -->
+  <div class="plans">
+    <div class="plan">
+      <h2 class="gold-gradient">Free</h2>
+      <p class="price gold-gradient">₹0</p>
+      <ul class="features">
+        <li>✔ First 3 Trials free for Deepfakes Videos</li>
+        <li>✔ First 3 Trials free for Deepfakes Voice</li>
+      </ul>
+      <a href="login.html" class="button">Get Started</a>
+    </div>
+
+    <div class="plan">
+      <h2 class="gold-gradient">Basic</h2>
+      <p class="price gold-gradient">₹499/month</p>
+      <ul class="features">
+        <li>✔ 30 Trials each (Video & Voice)</li>
+        <li>✔ Weekly Updates</li>
+        <li>✔ 24/7 Support</li>
+      </ul>
+      <a href="/payment.html" class="button">Upgrade</a>
+    </div>
+
+    <div class="plan">
+      <h2 class="gold-gradient">Pro</h2>
+      <p class="price gold-gradient">₹999/month</p>
+      <ul class="features">
+        <li>✔ Everything in Basic</li>
+        <li>✔ Unlimited Trials</li>
+        <li>✔ API Access</li>
+      </ul>
+      <a href="/payment.html" class="button">Upgrade Pro</a>
+    </div>
+  </div>
+
+ 
+</body>
+</html>

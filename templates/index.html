@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SatyaDrishti </title>
+    <style>
+        body {
+            {% if background_image %}
+                background-image: url("{{ background_image }}");
+            {% else %}
+                background-color: #f1f1f1;
+            {% endif %}
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: transparent;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        header ul li a:hover {
+            color: #00ccff;
+        }
+
+        header ul li a.premium:hover {
+    color: #dbb658;
+}
+
+header ul li a.premium:hover::after {
+    background: #dbb658;
+}
+
+
+        header ul li a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(to right, #d400d4, #00ccff);
+            transition: width 0.3s ease;
+        }
+
+        header ul li a:hover::after {
+            width: 100%;
+        }
+
+        .logo {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            margin: -100px auto 0 auto;
+            display: block;
+        }
+
+        .names {
+            background: linear-gradient(to right, #8a2387, #e94057, #f27121);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .invisible-container {
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+            max-width: 1200px;
+            text-align: center;
+        }
+
+        .homepage-content {
+            color: #fff;
+            text-align: center;
+            margin: 50px 100px 10px 0px;
+            line-height: 2;
+        }
+
+        .rectangle {
+            border: 2px solid #000;
+            border-radius: 5px;
+            width: fit-content;
+            padding: 10px 20px;
+            margin: 0 auto;
+            background: linear-gradient(to right, #00ccff, #d400d4);
+        }
+
+        .get-started {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header ul li a.active {
+    color: #00ccff;
+}
+
+header ul li a.active::after {
+    width: 100%;
+    background: linear-gradient(to right, #d400d4, #00ccff);
+}
+
+
+        footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><em><a href="index.html" class="active">Home</a></em></li>
+            <li><em><a href="about.html" >About</a></em></li>
+            <li><em><a href="login.html">Login</a></em></li>
+            <li><em><a href="register.html">Register</a></em></li>
+            <li><em><a href="contact.html">Contact</a></em></li>
+            <li><em><a href="premium.html" class="premium">Premium 👑</a></em></li>
+            
+
+        </ul>
+    </header>
+
+    <main>
+        <div class="invisible-container">
+            <!-- External SVG logo -->
+            <img class="logo" src="static/Image_gradients_left_to_right.svg" alt="SatyaDrishti Logo">
+            
+            <h2 class="names">"The Eye That Never Lies"</h2>
+
+            <div class="homepage-content">
+                <p style="text-align:center;">
+                    &emsp; SatyaDrishti, a Sanskrit term meaning “The Vision of Truth” or “True Sight”, embodies the essence of clarity, authenticity, and the power to distinguish reality from illusion. In an era where deepfake technology is evolving at an alarming pace—enabling the seamless manipulation of audio and video content—SatyaDrishti emerges as a cutting-edge AI-powered defense system designed to combat the growing threat of synthetic media. By leveraging advanced artificial intelligence and signal processing methodologies, SatyaDrishti effectively detects and flags manipulated voice and video content, serving as a robust shield against misinformation, digital fraud, and the erosion of public trust.
+                </p>
+            </div>
+
+            <div class="rectangle">
+                <a href="login.html" class="get-started">Get Started</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Error404. All rights reserved.
+    </footer>
+</body>
+</html>

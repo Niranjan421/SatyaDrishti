@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SatyaDrishti - About</title>
+    <style>
+        body {
+            {% if background_image %}
+                background-image: url("{{ background_image }}");
+            {% else %}
+                background-color: #f1f1f1;
+            {% endif %}
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: transparent;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        header ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        header ul li a:hover {
+            color: #00ccff;
+        }
+
+        header ul li a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(to right, #d400d4, #00ccff);
+            transition: width 0.3s ease;
+        }
+
+        header ul li a:hover::after {
+            width: 100%;
+        }
+
+        .gradient-title {
+            background: linear-gradient(to right, #d400d4, #00ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 70px;
+            font-weight: bold;
+            position: relative;
+            margin-top: -150px;
+        }
+
+        .gradient-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #d400d4, #00ccff);
+            opacity: 0.5;
+            transform: scaleY(-1);
+            filter: blur(2px);
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .about-content {
+            background-color: rgba(255, 255, 255, 0);
+            width: 80%;
+            color: #fff;
+            max-width: 800px;
+            padding: 20px;
+            overflow-y: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            line-height: 2;
+            max-height: 400px;
+        }
+
+        header ul li a.active {
+    color: #00ccff;
+}
+
+header ul li a.active::after {
+    width: 100%;
+    background: linear-gradient(to right, #d400d4, #00ccff);
+}
+
+
+       header ul li a.premium:hover {
+    color: #dbb658;
+}
+
+header ul li a.premium:hover::after {
+    background: #dbb658;
+}
+
+        .about-content p {
+            text-align: justify;
+        }
+
+        .about-content ul {
+            padding-left: 20px;
+        }
+
+        .about-content li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Button Styling */
+        .accuracy-btn {
+            background-color: #00ccff;
+            color:  black;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 2rem;
+            margin-bottom: 2em;
+            transition: background-color 0.3s ease;
+            position: center;
+            bottom: 20px;
+        }
+
+        .accuracy-btn:hover {
+            background-color: #d400d4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><em><a href="index.html">Home</a></em></li>
+            <li><em><a href="about.html" class="active">About</a></em></li>
+            <li><em><a href="login.html">Login</a></em></li>
+            <li><em><a href="register.html">Register</a></em></li>
+            <li><em><a href="contact.html">Contact</a></em></li>
+            <li><em><a href="premium.html" class="premium">Premium 👑</a></em></li>
+        </ul>
+        <h1 class="gradient-title">VOICE DEEPFAKE DETECTION</h1>
+    </header>
+
+    <main>
+        <div class="about-content">
+            <h2 style="text-align: center; background: linear-gradient(to right, #8A2387, #E94057, #f27121); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: bold;">About the Project: Deepfake Detection</h2>
+
+            <p>In a world where truth can be forged, our mission is simple: to protect reality.</p>
+            <p>The Deepfake Detection System is an advanced AI-driven platform designed to detect and prevent the malicious use of deepfake technology—both in video and voice formats. With deepfakes becoming increasingly sophisticated and accessible, this system serves as a digital guardian, helping individuals, organizations, and communities defend against deception.</p>
+            <p><strong>Key Functionalities</strong></p>
+            <ul>
+                <p><li><strong>Video Deepfake Detection</strong></p>
+                    <p>1. AI-Powered Analysis: Detects manipulated facial expressions, lip-sync mismatches, and frame-level inconsistencies.</p>
+                    <p>2. Frame-by-Frame Scanning: Analyzes each frame for tampering artifacts such as unnatural transitions, facial warping, and inconsistent lighting cues.</p>
+                    <p>3. Instant Verdict: Users can upload a video and receive a comprehensive authenticity score along with visual breakdowns of suspicious regions.</p>
+                <li><strong>Voice Deepfake Detection</strong>
+                    <p>1. Signal Processing Techniques: Analyzes acoustic properties such as pitch, tone, and modulation, as well as linguistic patterns to uncover anomalies in speech that indicate potential synthetic manipulation.</p>
+                    <p>2. Real-Time Detection: Operates in real-time to detect deepfake voices during live interactions or audio playback sessions.</p>
+                    <p>3. User-Friendly Interface: Allows users to upload or record audio samples with ease, providing immediate feedback on authenticity.</p>
+                    <p>4. Adaptive Learning: Continuously improves detection capabilities by training on evolving datasets of voice-based deepfakes.</p>
+
+                    <strong>Why It Matters</strong>
+                    <p>Deepfakes threaten the foundation of trust in digital communication—whether by impersonating someone’s voice to commit fraud or spreading misinformation through synthetic videos. The Deepfake Detection System is built to:
+                    <li>Empower users with verified truth</li>
+                    <li>Prevent the spread of misinformation and fraud</li>
+                    <li>Secure digital communications across platforms</li></p>
+
+                    <strong>Designed for Everyone</strong>
+                    <p>From journalists verifying sensitive content, to enterprises protecting brand integrity, and individuals concerned about digital privacy—our intuitive interface makes detection accessible. Users can simply upload a file or record live audio/video to receive rapid, transparent results.</p>
+
+                    <strong>Real. Reliable. Ready.</strong>
+                    <p>Join us in the fight against digital forgery. Because truth should never be optional.</p>
+            </ul>
+        </div>
+
+        <!-- Deepfake Accuracy Button -->
+        <a href="chart.html">
+    <button class="accuracy-btn">Deepfake Accuracy</button>
+</a>
+
+    </main>
+
+    <footer>
+        &copy; 2025 Error404. All rights reserved.
+    </footer>
+</body>
+</html>
